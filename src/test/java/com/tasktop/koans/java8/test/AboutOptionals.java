@@ -53,16 +53,16 @@ public class AboutOptionals {
 
 	@Test
 	public void optionalsGiveYouSemantic() {
-		Person bob = new Person("Bob", Optional.of("Longboarding"));
+		Person bob = new Person("Bob", Optional.of(null));
 
 		boolean bobHasInteresets = bob.getInterests().isPresent();
 
-		assertThat(bobHasInteresets).isFalse(); // FIXME: no optional present. So false can't be true ;)
+		assertThat(bobHasInteresets).isFalse();
 	}
 
 	@Test
 	public void optionalsAreOptional() {
-		Optional<String> optional = Optional.of(null); // FIXME: find out how to create an optional of null
+		Optional<String> optional = Optional.of(null);
 
 		String value = optional.orElse("b");
 
