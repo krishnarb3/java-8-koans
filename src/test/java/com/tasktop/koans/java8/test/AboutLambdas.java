@@ -245,7 +245,7 @@ public class AboutLambdas {
 	public void java8_passingOwnFunctionalInterfaces() {
 		Yeller yeller = new Yeller();
 
-		String echo = yeller.yell("hello", "echo", (echo1, echo2) -> echo1 + echo2);
+		String echo = yeller.yell("hello", "echo", (echo1, echo2) -> echo1 + " " + echo2);
 
 		assertThat(echo).isEqualTo("hello echo");
 	}
